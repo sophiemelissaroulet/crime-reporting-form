@@ -1,0 +1,114 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.intro-container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+.intro-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+
+.intro-container p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Subheading */
+.intro-container h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* Map iframe styling */
+iframe {
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Button styling */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .intro-container {
+        padding: 15px;
+    }
+
+    .intro-container h1 {
+        font-size: 1.5em;
+    }
+
+    .intro-container p {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+.intro-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}

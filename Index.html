@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Informal de Actividad Criminal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.arcgis.com/4.23/"></script> <!-- ArcGIS API -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1; /* Ensures the footer stays at the bottom */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #004494;
+        }
+
+        #mapDiv {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reporte Informal de Actividad Criminal</h1>
+    </header>
+    <main>
+        <form id="crimeReportForm">
+            <label for="crimeType">Tipo de Delito:</label>
+            <select id="crimeType" name="crimeType" required>
+                <option value="Theft">Robo</option>
+                <option value="Assault">Hurto</option>
+                <option value="Vandalism">Vandalismo</option>
+                <option value="Other">Otro</option>
+            </select>
+        
+            <label for="crimeDate">Fecha del Incidente:</label>
+            <input type="date" id="crimeDate" name="crimeDate" required>
+
+            <label for="crimeTime">Hora del Incidente:</label>
+            <input type="time" id="crimeTime" name="crimeTime" required>
+
+            <label for="crimeDescription">Descripción:</label>
+            <textarea id="crimeDescription" name="crimeDescription" rows="4" required></textarea>
+
+            <label for="crimeLocation">Ubicación:</label>
+            <div id="mapDiv"></div>
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+
+            <button type="submit">Entregar Reporte</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 La Cumbre - Denuncia Informal</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
