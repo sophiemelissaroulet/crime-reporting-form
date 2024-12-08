@@ -90,15 +90,10 @@ async function sendDataToGoogleSheets(data) {
             body: JSON.stringify(data)
         });
 
-        const result = await response.json();
-        alert("Report submitted successfully!");
-    
+        window.location.href = "thankyou.html";
     } catch (error) {
-        // If a 'SyntaxError' occurs, redirect to the "Gracias por su reporte" page
-        if (error instanceof SyntaxError) {
-            window.location.href = "thankyou.html"; // Redirect to a page that says "Gracias por su reporte"
-        } else {
-            console.error("An error occurred: ", error);
-        }
+        console.error("An error occurred: ", error);
+
+        window.location.href = "thankyou.html";
     }
 }
